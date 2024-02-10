@@ -22,7 +22,7 @@ That's it, should be good to train and evaluate detection models.
 ## Data preparation
 
 Download and extract drama dataset with annotations from
-[http://cocodataset.org/#download](https://usa.honda-ri.com/drama).
+[https://usa.honda-ri.com/drama](https://usa.honda-ri.com/drama).
 We expect the directory structure to be the following:
 ```
 path/to/drama/
@@ -36,5 +36,5 @@ path/to/drama/
 ## Training
 To train baseline DRUformer on a single node with 8 gpus for 300 epochs run:
 ```
-python -m torch.distributed.launch --nproc_per_node=8 --use_env main.py --coco_path /path/to/drama 
+python -m torch.distributed.launch --nproc_per_node=8 --use_env main.py --img_folder /data/drama/ --ann_path /data/drama/annotations/
 ```
