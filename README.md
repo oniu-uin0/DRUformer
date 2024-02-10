@@ -38,3 +38,9 @@ To train baseline DRUformer on a single node with 8 gpus for 300 epochs run:
 ```
 python -m torch.distributed.launch --nproc_per_node=8 --use_env main.py --img_folder /data/drama/ --ann_path /data/drama/annotations/
 ```
+## Citation
+If you find this repository useful, please consider giving a star ⭐ and citation 🦖:
+```
+
+```
+
