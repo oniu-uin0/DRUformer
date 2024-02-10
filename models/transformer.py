@@ -1,6 +1,6 @@
 # Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved
 """
-DETR Transformer class.
+DRUformer Transformer class.
 
 Copy-paste from torch.nn.Transformer with modifications:
     * positional encodings are passed in MHattention
@@ -53,10 +53,10 @@ class Transformer(nn.Module):
         query_embed = query_embed.unsqueeze(1).repeat(1, bs, 1)
 
         mask = mask.flatten(1)
-        # (100,4,256)
+       
         tgt = torch.zeros_like(query_embed)
         memory = self.encoder(src, src_key_padding_mask=mask, pos=pos_embed)
-        # [6,100,4,256]
+        
         hs = self.decoder(tgt, memory, memory_key_padding_mask=mask,
                           pos=pos_embed, query_pos=query_embed)
         return hs.transpose(1, 2), memory.permute(1, 2, 0).view(bs, c, h, w)
@@ -87,7 +87,7 @@ class DRUformer(nn.Module):
         self.nhead = nhead
 
         self.ru_token = nn.Parameter(torch.zeros(1, 1, 256))
-        # 4direction
+        
         self.intention_embedding_layer = nn.Embedding(5, d_model)
 
         self.ru_pos = nn.Embedding(101, 256)
