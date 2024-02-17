@@ -81,7 +81,7 @@ def get_args_parser():
                         help="Relative classification weight of the no-object class")
 
     # dataset parameters
-    parser.add_argument('--dataset_file', default='coco')
+    parser.add_argument('--dataset_file', default='dru')
     parser.add_argument('--num_classes', default=91, type=int,
                         help="Number of classes")
     parser.add_argument('--coco_path', type=str)
