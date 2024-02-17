@@ -23,19 +23,15 @@ class CocoDetection(torchvision.datasets.CocoDetection):
     def __getitem__(self, idx):
         img, target = super(CocoDetection, self).__getitem__(idx)
         image_id = self.ids[idx]
-        # if image_id == 9389:
+       
         # import pdb;pdb.set_trace()
         target = {'image_id': image_id, 'annotations': target}
-        # if image_id == 9492 or image_id == 11065:
-        #     print(target)
+      
         img, target = self.prepare(img, target)
-        # if image_id == torch.tensor([9389]):
-        #     print(target)
+       
         if self._transforms is not None:
             img, target = self._transforms(img, target)
-            # print(target)
-        # if torch.equal(target["labels"], torch.tensor([], dtype=torch.int64)):
-        #     print(target["image_id"])
+           
 
         return img, target
 
