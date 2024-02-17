@@ -51,11 +51,9 @@ class RUDetection(torchvision.datasets.CocoDetection):
         # if image_id == 9492 or image_id == 11065:
         #     print(target)
         img, target = self.prepare(img, target)
-        # if image_id == torch.tensor([9389]):
-        #     print(target)
-        # if self._transforms is not None:
-        #     img, target = self._transforms(img, target)
-        #     # print(target)
+
+        if self._transforms is not None:
+            img, target = self._transforms(img, target)
         # if torch.equal(target["labels"], torch.tensor([], dtype=torch.int64)):
         #     print(target["image_id"])
 
