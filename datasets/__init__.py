@@ -26,7 +26,7 @@ def build_dataset(image_set, args):
 
 
 def build_ru_dataset(image_set, args):
-    if args.dataset_file == 'coco':
+    if args.dataset_file == 'dru':
         return build_ru(image_set, args)
     if args.dataset_file == 'coco_panoptic':
         # to avoid making panopticapi required for coco
