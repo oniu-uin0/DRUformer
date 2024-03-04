@@ -12,7 +12,7 @@ Then, install PyTorch 1.5+ and torchvision 0.6+:
 ```
 conda install -c pytorch pytorch torchvision
 ```
-Install pycocotools (for evaluation on COCO) and scipy (for training):
+Install pycocotools (for evaluation) and scipy (for training):
 ```
 conda install cython scipy
 pip install -U 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'
