@@ -41,6 +41,14 @@ python -m torch.distributed.launch --nproc_per_node=8 --use_env main.py --img_fo
 ## Citation
 If you find this repository useful, please consider giving a star ⭐ and citation 🦖:
 ```
-
+@ARTICLE{10530001,
+  author={Niu, Yingjie and Ding, Ming and Fujii, Keisuke and Ohtani, Kento and Carballo, Alexander and Takeda, Kazuya},
+  journal={IEEE Access}, 
+  title={DRUformer: Enhancing Driving Scene Important Object Detection With Driving Scene Relationship Understanding}, 
+  year={2024},
+  volume={12},
+  number={},
+  pages={67589-67599},
+  doi={10.1109/ACCESS.2024.3400589}}
 ```
 
